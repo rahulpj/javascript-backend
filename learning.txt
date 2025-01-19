@@ -2,3 +2,10 @@
 -> so wrap it in try and catch also use async await.
 
 -> 2 approches to do database connection, first write whole connection code in IIFEs(immediately invoked function expressions) with async await and try catch ans the other is take this whole code to a new folder db and in that place this code in index.js and export it and use it in index.js
+
+
+Utilites
+
+-> creating higher order function named asyncHandler which takes and async function needed to be executed and wrap it inside the try catch block to avoid writing it again and again
+
+-> Custom ApiError and ApiResponse class
