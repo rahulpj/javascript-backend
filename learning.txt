@@ -9,3 +9,25 @@ Utilites
 -> creating higher order function named asyncHandler which takes and async function needed to be executed and wrap it inside the try catch block to avoid writing it again and again
 
 -> Custom ApiError and ApiResponse class
+
+
+-> mongodb stores data in BSON (binary json)
+
+-> Now creating user and video model
+-> using aggregate pipeline in video for watch history
+-> using bcrypt and jsonwebtoken in user model
+-> using bcrypt for hashing the password and then storing it in database
+-> mongoose provide some hooks like pre and post 
+-> so using pre hook hashing the password and then storing it to database
+
+
+schema.methods.methodName = function(arguments) {
+  // `this` refers to the document instance
+  return someResult;
+};
+
+-> adding instance methods for a model. These methods are available on document instances of that model. 
+1) these methods work on a specific document instance, giving you the access to the documents field.
+2) we can define any custom functionality like manipulating data, validating values or interacting with external APIs specific to a document
+
+using these instance methods for verifying the user and generating access and refresh tokens for a particular document
