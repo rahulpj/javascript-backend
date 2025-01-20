@@ -31,3 +31,15 @@ schema.methods.methodName = function(arguments) {
 2) we can define any custom functionality like manipulating data, validating values or interacting with external APIs specific to a document
 
 using these instance methods for verifying the user and generating access and refresh tokens for a particular document
+
+
+File uploading
+
+-> it is always better to keep this as a utility or in a middleware
+
+-> using multer and cloudinary service
+2 steps
+-> using multer we will take file from user and upload to it local server on temporary basis 
+-> cloudinary will take the file from local server to cloudinary server
+
+we can also take the file from user through multer and directly upload it to cloudinary server but in production grade application ew temporarily keep the file in the local server to reattemp the upload if it fails in any case
