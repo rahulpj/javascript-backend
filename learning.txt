@@ -43,3 +43,47 @@ File uploading
 -> cloudinary will take the file from local server to cloudinary server
 
 we can also take the file from user through multer and directly upload it to cloudinary server but in production grade application ew temporarily keep the file in the local server to reattemp the upload if it fails in any case
+
+
+HTTP 
+
+-> Hyper text transfer protocol 
+
+HTTP Headers
+-> metadata-> key-value sent along with request and response 
+-> caching, authentication, manage state
+-> Request Headers         ->       from client
+-> Response Headers        ->       from server   
+-> Representation Headers  ->       ecoding/compression
+-> Payload Headers         ->       data
+
+Most Common Headers 
+
+-> Accept : application/json
+-> User-Agent : gives the information about the user like the browser or operating system from where the request is comming
+-> Authorization : Bearer jsonwebtoken 
+-> Content-Type : which type of data you are sending 
+-> Cookie 
+-> Cache-Control
+
+HTTP Status code
+
+1xx information
+2xx Success
+3xx Redirection
+4xx Client error 
+5xx Server error 
+
+200 OK
+201 Created
+202 accepted
+400 bad request 
+404 not found 
+401 Unauthorized
+ 
+
+Controller and Routes
+
+-> creating user controller and routes 
+-> using user controller in user routes and using user routes in app.js using middleware 
+-> maintaining industry standart by keeping the path of routes as /api/v1/name 
