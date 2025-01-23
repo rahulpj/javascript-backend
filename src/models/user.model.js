@@ -88,6 +88,4 @@ userSchema.methods.generateRefreshToken = function () {
   );
 };
 
-userSchema.methods.generateAccessToken = function () {};
-
 export const User = mongoose.model("User", userSchema);

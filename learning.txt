@@ -87,3 +87,7 @@ Controller and Routes
 -> creating user controller and routes 
 -> using user controller in user routes and using user routes in app.js using middleware 
 -> maintaining industry standart by keeping the path of routes as /api/v1/name 
+
+Register Controller -> taking data form req.body and req.files, files will be uploaded by multer middleware and then uploading the files to the cloudinary, validation checks, etc
+
+Login Controller -> 
