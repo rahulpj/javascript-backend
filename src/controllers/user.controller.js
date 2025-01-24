@@ -32,6 +32,8 @@ const registerUser = asyncHandler(async (req, res) => {
 
   const { fullname, email, username, password } = req.body;
 
+  console.log(req.body);
+
   if (
     [fullname, email, username, password].some((field) => field?.trim() === "")
   ) {
@@ -46,7 +48,7 @@ const registerUser = asyncHandler(async (req, res) => {
     throw new ApiError(409, "User with email or username already exist");
   }
 
-  const avatarLocalPath = null;
+  let avatarLocalPath = null;
   if (
     req.files &&
     Array.isArray(req.files.avatar) &&
@@ -107,6 +109,7 @@ const loginUser = asyncHandler(async (req, res) => {
   // send cookie
 
   const { email, username, password } = req.body;
+  console.log(email, username, password);
   if (!username && !email) {
     throw new ApiError(400, "username or email is required");
   }
@@ -133,9 +136,9 @@ const loginUser = asyncHandler(async (req, res) => {
     user._id
   );
 
-  const loggedInUser = User.findById(user._id).select(
-    "-password -refreshToken"
-  );
+  const loggedInUser = await User.findById(user._id)
+    .select("-password -refreshToken")
+    .lean();
 
   const options = {
     httpOnly: true,

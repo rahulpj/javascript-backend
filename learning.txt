@@ -90,4 +90,11 @@ Controller and Routes
 
 Register Controller -> taking data form req.body and req.files, files will be uploaded by multer middleware and then uploading the files to the cloudinary, validation checks, etc
 
-Login Controller -> 
+Errors faces:- 
+req.body was undefined in login controller 
+reason:- express.json() and express.urlencoded() do not parse multipart/form-data, req.body is empty.
+solution:- upload.none()
+
+.lean():
+
+Converts the Mongoose query result into a plain JavaScript object, eliminating circular references.
